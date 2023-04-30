@@ -1,0 +1,45 @@
+@use "./sass/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+
+html {
+  font-size: 100%;
+
+  @include tablet {
+    font-size: 90%;
+  }
+
+  @include mobile {
+    font-size: 80%;
+  }
+}
+
+.container {
+  max-width: 1400px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  background: black;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 8px;
+}

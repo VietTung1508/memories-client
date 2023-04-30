@@ -1,0 +1,191 @@
+@use "../../sass/" as *;
+
+.upload {
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    margin-bottom: 58px;
+  }
+  .form-upload {
+    width: 80%;
+    height: 100%;
+    margin: 1rem 0 3rem 0;
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+    }
+    .upload-img-wrapper {
+      width: 50%;
+      padding: 1rem 0;
+      height: 100%;
+      border-radius: 20px;
+
+      @include tablet {
+        width: 100%;
+        padding: 0rem 0;
+      }
+
+      .upload-noImage {
+        margin: 0 auto;
+        width: 90%;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @include tablet {
+          width: 100%;
+          height: 350px;
+        }
+
+        .inp-image {
+          display: none;
+        }
+
+        .upload-icon {
+          color: #fff;
+          font-size: 40px;
+        }
+
+        h3 {
+          color: $text-color;
+        }
+      }
+
+      .post-image {
+        width: 100%;
+        padding: 3rem 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+
+      .delete-icon {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: #fff;
+        transform: scale(1.5);
+        padding: 7px 8px;
+        border-radius: 50%;
+        transition: 0.3s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    .upload-info {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 2rem 1rem;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      input {
+        width: 80%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $text-color;
+        font-weight: 800;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        transition: 0.3s ease-in-out;
+
+        &:focus {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      .upload-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .avatar {
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .anonymous-avatar {
+          cursor: pointer;
+          background-color: $avatar-background-color;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          span {
+            color: $text-color;
+            font-weight: 700;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+          }
+        }
+        .author-username {
+          color: $text-color;
+        }
+      }
+
+      .inp-title {
+        padding-bottom: 6px;
+        font-size: 35px;
+      }
+      .inp-content {
+        padding-left: 10px;
+        padding-bottom: 15px;
+        font-size: 20px;
+      }
+      .inp-category {
+        padding-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .upload-error {
+        color: #e2042c;
+        margin: -10px 0 -30px 0;
+      }
+
+      .btn-upload {
+        width: 20%;
+        padding: 10px 0;
+        border-radius: 8px;
+        color: $text-color;
+        background-color: $button-background-color;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $button-background-color-hover;
+        }
+        @include tablet {
+          width: 100%;
+          padding: 14px 0;
+        }
+      }
+    }
+  }
+}

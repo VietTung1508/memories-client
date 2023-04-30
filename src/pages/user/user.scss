@@ -1,0 +1,102 @@
+@use "../../sass/" as *;
+
+.userPage {
+  @include mobile {
+    margin-bottom: 58px;
+  }
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .user-avatar {
+      width: 150px;
+      height: 150px;
+      .user-avatar-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .user-anonymous-avatar {
+      background-color: $avatar-background-color;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+
+      span {
+        font-size: 50px;
+      }
+    }
+
+    .user-info {
+      color: $text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 30px;
+      .username {
+        font-size: 40px;
+      }
+
+      .email {
+        margin-bottom: 20px;
+      }
+
+      .introduction {
+        margin-bottom: 10px;
+      }
+
+      .followers {
+        cursor: default;
+      }
+
+      .user-actions {
+        button {
+          padding: 10px 15px;
+          border-radius: 30px;
+          background-color: $button-background-color;
+          color: $text-color;
+          cursor: pointer;
+
+          &.active {
+            background-color: $sidebar-color;
+          }
+        }
+      }
+
+      .user-filter-pin {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        button {
+          background-color: transparent;
+          color: $text-color;
+          cursor: pointer;
+          font-size: 18px;
+          padding-bottom: 4px;
+
+          &.active {
+            border-bottom: 2.5px solid #fff;
+          }
+        }
+
+        .btn-created {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

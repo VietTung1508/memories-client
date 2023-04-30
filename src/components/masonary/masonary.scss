@@ -1,0 +1,118 @@
+@use "../../sass/" as *;
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.masonary {
+  column-count: 4;
+  column-gap: 15px;
+  position: relative;
+
+  .go-up-wrapper {
+    position: fixed;
+    bottom: 6%;
+    right: 3%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $sidebar-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background-color: rgb(33, 33, 33, 0.9);
+    }
+
+    @include mobile {
+      bottom: 12%;
+      right: 5%;
+    }
+    .go-up-icon {
+      color: $text-color;
+      font-size: 20px;
+    }
+  }
+
+  &.noSidebar {
+    column-count: 5;
+
+    @include tablet {
+      column-count: 3;
+    }
+
+    @include mobile {
+      column-count: 2;
+    }
+  }
+
+  &.followPage {
+    column-count: 3;
+    @include tablet {
+      column-count: 3;
+    }
+    @include mobile {
+      column-count: 2;
+    }
+  }
+
+  @include tablet {
+    column-count: 2;
+  }
+
+  @include mobile {
+    column-count: 2;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+  }
+}
+
+.loading_pin {
+  text-align: center;
+
+  .loading-icon {
+    color: $text-color;
+    padding: 1.5rem 0;
+    font-size: 30px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.notFound {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  color: $text-color;
+  margin-top: 50px;
+  h1 {
+    font-size: 45px;
+    font-weight: 800;
+    @include tablet {
+      font-size: 25px;
+    }
+  }
+
+  .notFound-img {
+    width: 40%;
+    @include tablet {
+      width: 50%;
+    }
+  }
+
+  .notFound-info {
+    font-size: 20px;
+    word-spacing: 3px;
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+}

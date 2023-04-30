@@ -1,0 +1,38 @@
+@use "../../sass/" as *;
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  background-color: $main-color;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .spinner {
+      font-size: 30px;
+      color: $text-color;
+      animation: spin 0.7s linear infinite;
+    }
+
+    h1 {
+      color: $text-color;
+      font-size: 25px;
+      font-weight: 800;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use "../../sass/" as *;
+
+.search-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: $text-color;
+  background-color: transparent;
+  padding: 0.7rem;
+  padding-left: 1rem;
+  cursor: pointer;
+
+  .user-avatar {
+    width: 20%;
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .user-avatar-anonymous {
+    width: 20%;
+    span {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $avatar-background-color;
+      font-size: 20px;
+    }
+  }
+
+  .search-item-icon {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    .icon {
+      text-align: center;
+      margin-right: 0.8em;
+    }
+  }
+
+  .search-item-info {
+    width: 80%;
+    .title {
+      font-size: 20px;
+    }
+
+    .username {
+      font-size: 15px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

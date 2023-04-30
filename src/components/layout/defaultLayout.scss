@@ -1,0 +1,24 @@
+@use "../../sass/" as *;
+
+.wrapper {
+  background-color: $main-color;
+
+  &__content {
+    margin-left: 200px;
+    padding: 0 10px 0 20px;
+    height: 100%;
+    min-height: 100vh;
+    @include mobile {
+      margin-left: 0px;
+      padding: 0 10px 0 10px;
+    }
+
+    &.noSideBar {
+      margin-left: 55px;
+
+      @include mobile {
+        margin-left: 0px;
+      }
+    }
+  }
+}

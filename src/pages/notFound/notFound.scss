@@ -1,0 +1,49 @@
+@use "../../sass/" as *;
+
+.notfound {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  background-color: $main-color;
+  color: $text-color;
+  gap: 25px;
+
+  .status {
+    width: 40%;
+  }
+
+  .info {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p:first-of-type {
+      margin-bottom: 5px;
+    }
+  }
+
+  button {
+    padding: 10px 15px;
+    color: $text-color;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(26, 117, 159);
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(26, 117, 159, 0.8);
+    }
+  }
+}
