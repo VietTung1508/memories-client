@@ -99,7 +99,7 @@ function ProfileSetting() {
       tempAvatar && data.append("avatar", inpValue.avatar);
 
       const res = await axios.put(
-        `https://memories-api.onrender.com/users/`,
+        `https://memories-api-1an9.onrender.com/users/`,
         data,
         {
           "content-type": "multipart/form-data",

@@ -73,10 +73,14 @@ function Upload() {
     data.append("content", value.content);
     data.append("category", value.category.toLowerCase().trim());
     try {
-      await axios.post(`https://memories-api.onrender.com/posts/create`, data, {
-        "content-type": "multipart/form-data",
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.post(
+        `https://memories-api-1an9.onrender.com/posts/create`,
+        data,
+        {
+          "content-type": "multipart/form-data",
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setIsLoading(false);
       navigate("/");
     } catch (e) {
